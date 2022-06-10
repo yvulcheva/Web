@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="heading">Заглавие</h1>
+
+    <iframe name="noRedirection" id="noRedirection" style="display: none"></iframe>
+
+    <form action="upload.php" method="post" enctype="multipart/form-data" target="noRedirection" onchange="uploadFile()">
+        <input id="fileUpload" type="file" name="file" accept=".csv" />   
+        <p class="insideText" id="insideText">Drag your csv file here or click in this area.</p>
+        <button class="button" id="upload" type="submit">Upload</button>
+    </form>
+    
+    <section class="buttons" id="buttons">
+        <button class="button" onclick="goToExam()">Изпитен режим</button>
+        <button class="button" onclick="goToReview()">Режим на ревю</button>
+        <button class="button" onclick="goToExport()">Екпорт за Мудъл</button>
+    </section>
+    <script src="./mainPage.js"></script>
+</body>
+</html>
