@@ -73,8 +73,11 @@ form .insideText {
 
 .buttons .button {
     margin-top: 400px;
-    display: none;
     width: 150px;
     height: 35px;
     margin-left: 8px;
+}
+
+.buttons {
+    display: none;
 }
