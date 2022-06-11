@@ -1,11 +1,11 @@
 function goToExam() {
-    location.href = './exam.html';
+    location.href = '../Exam/exam.html';
 }
 function goToReview() {
-    location.href = './review.html';
+    location.href = '../Review/review.html';
 }
 function goToExport() {
-    location.href = './export.html';
+    location.href = '../Export/export.html';
 }
 
 // Drop zone functions

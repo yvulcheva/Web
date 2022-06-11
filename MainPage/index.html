@@ -12,9 +12,9 @@
 
     <iframe name="noRedirection" id="noRedirection" style="display: none"></iframe>
 
-    <form action="upload.php" method="post" enctype="multipart/form-data" target="noRedirection" onchange="uploadFile()">
+    <form target="noRedirection" action="upload.php" method="post" enctype="multipart/form-data" onchange="uploadFile()">
         <input id="fileUpload" type="file" name="file" accept=".csv" />   
-        <p class="insideText" id="insideText">Придърпай своя csv файл или натисни тази област.</p>
+        <p class="insideText" id="insideText">Придърпай своят csv файл или натисни тази област.</p>
         <button class="button" id="upload" type="submit">Генерирай</button>
     </form>
     
@@ -23,6 +23,7 @@
         <button class="button" onclick="goToReview()">Режим на ревю</button>
         <button class="button" onclick="goToExport()">Екпорт за Мудъл</button>
     </section>
+
     <script src="./mainPage.js"></script>
 </body>
 </html>
