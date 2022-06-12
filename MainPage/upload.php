@@ -17,7 +17,7 @@
             die("Connection failed: " . $con->connect_error);
         }
         
-        $query = "INSERT INTO files (file_name, created) VALUES ('$location', NOW())";		
+        $query = "INSERT INTO files (file_name, created) VALUES ('$filename', NOW())";		
 	    if ($con->query($query)) {
 	        echo "true";
 	    }else{

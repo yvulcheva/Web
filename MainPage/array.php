@@ -3,6 +3,7 @@
 
     $uploaded = "";
     $array=array();
+    $filename = "";
     $location ="";
     
     global $dbHost; 
@@ -10,7 +11,6 @@
     global $dbPassword; 
     global $myDb; 
     global $array;
-    $array=array();
     
     $con = new mysqli($dbHost, $dbUsername, $dbPassword,$myDb);
     // Check connection
@@ -21,14 +21,16 @@
     $sql = "SELECT file_name FROM files ORDER BY created DESC LIMIT 1";
     $results = mysqli_query($con,$sql);
     $row = mysqli_fetch_assoc($results);
-    $location=$row["file_name"];
+    $filename = $row["file_name"];
+
+    $location="../upload/" . $filename;
     
     if (($uploaded = fopen($location, 'r')) !== FALSE) {
         //Getting the columns names
         $columns = fgetcsv($uploaded, 1000, ";");
         $counter = count($columns);
     
-        for($i=0;$i<$counter;$i++){
+        for($i=0;$i<=$counter;$i++){
             //Getting the values for every column 
             //Example of $data - 1 Въпрос 1 Отговор едно Отговор 2..
             //Example of $element
