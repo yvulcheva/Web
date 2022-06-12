@@ -62,15 +62,78 @@
             echo("</b></p><p><b>");
             print_r("Оценка: " . ($score/(count($array))*100) . "%");
             echo("</b></p>");
-
-            $name= substr($filename,0,-4);
-            $myfile = fopen("./export/$name.txt", "w");
         ?>
 
-        <form action="exportResult.php">
+        <form action="exportResult.php" method="post">
             <section id="buttons", class="buttons">
                 <button id="button" class="button">Експорт на Вашия резултат</button>
             </section>
+            <?php
+                //Getting only the name without the extension
+                $name= substr($filename,0,-4);
+                
+
+                $myfile = fopen("./export/$name.txt", "w") or die("Unable to open file!");
+
+                for($i = 0; $i < count($array); $i++){
+                    fwrite($myfile,"Въпрос " . ($i + 1) . ": ");
+                    fwrite($myfile,$array[$i]['Question']."\n");
+                    fwrite($myfile,"A) ");
+                    fwrite($myfile,$array[$i]['Option1']."\n");
+                    fwrite($myfile,"B) ");
+                    fwrite($myfile,$array[$i]['Option2']."\n");
+                    fwrite($myfile,"C) ");
+                    fwrite($myfile,$array[$i]['Option3']."\n");
+                    fwrite($myfile,"D) ");
+                    fwrite($myfile,$array[$i]['Option4']."\n");
+                    fwrite($myfile,"Верен отговор: ");
+
+                    switch ($array[$i]['Answer']) {
+                        case 1:
+                            fwrite($myfile,"A\n");
+                            break;
+                        case 2:
+                            fwrite($myfile,"B\n");
+                            break;
+                        case 3:
+                            fwrite($myfile,"C\n");
+                            break;
+                        case 4:
+                            fwrite($myfile,"D\n");
+                            break;
+                        default:
+                        echo "Not a correct format for ANSWER\n";
+                    }
+
+                    fwrite($myfile,"Вашият отговор: ");
+                    $varQuestion = "question" . $i;
+                    $currentAnswer = $_POST[$varQuestion];
+
+                    switch ($currentAnswer) {
+                        case 0:
+                            fwrite($myfile,"Неотговорен");
+                            break;
+                        case 1:
+                            fwrite($myfile,"A");
+                            break;
+                        case 2:
+                            fwrite($myfile,"B");
+                            break;
+                        case 3:
+                            fwrite($myfile,"C");
+                            break;
+                        case 4:
+                            fwrite($myfile,"D");
+                            break;
+                        default:
+                        echo "Not a correct format for ANSWER\n";
+                    }
+                    
+                    if($i !== count($array) - 1){
+                        fwrite($myfile,"\n\n");
+                    }
+                }
+            ?>
         </form>
         <br>
     </section>
