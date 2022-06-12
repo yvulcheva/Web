@@ -16,9 +16,10 @@
         <?php
             include "../MainPage/array.php";
             $score = 0;
-            for($i = 0; $i < count($array); $i++){
+            for($i = 0; $i < count($array); $i++)
+            {
                 ?>
-                <form action="" method="post">
+                <form action="score.php" method="post">
                     <?php
                     echo "<ul class='questions'>";
                         echo "<li>";
@@ -50,18 +51,24 @@
                             print_r($array[$i]['Option4']);
                         echo "</li>";
                     echo "</ul>";
-                    ?>
-                    <select id="question" name="question">
-                        <option value="0" disabled selected>Изберете отговор</option>
-                        <option value="A">A</option>
-                        <option value="B">B</option>
-                        <option value="C">C</option>
-                        <option value="D">D</option>
-                    </select>
-                    <input type="submit" name="submit" value="Проверка">
-                </form>
-                <?php
+                    $varQuestion = "question" . $i;
+                    var_dump($varQuestion); // comment this later
+
+                    echo '<select id="' . $varQuestion . '" name="' . $varQuestion . '">';
+                        echo '<option value="0">Изберете отговор</option>';
+                        echo '<option value="1">A</option>';
+                        echo '<option value="2">B</option>';
+                        echo '<option value="3">C</option>';
+                        echo '<option value="4">D</option>';
+                    echo '</select>';
+
             }
+                ?>
+
+            <input type="submit" name="submit" value="Проверка">
+            </form>
+
+                <?php
 
             function submit()
             {
