@@ -12,6 +12,15 @@ body {
     padding: 0.5em;
 }
 
+.pageScore {
+    width: 1024px;
+    background-color: rgb(253, 253, 253);
+    margin: auto;
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
 .questions {
     list-style-type: none;
 }
