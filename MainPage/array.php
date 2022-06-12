@@ -6,12 +6,6 @@
     $filename = "";
     $location ="";
     
-    global $dbHost; 
-    global $dbUsername; 
-    global $dbPassword; 
-    global $myDb; 
-    global $array;
-    
     $con = new mysqli($dbHost, $dbUsername, $dbPassword,$myDb);
     // Check connection
     if ($con->connect_error) {

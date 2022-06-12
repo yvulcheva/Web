@@ -1,9 +1,6 @@
 <?php
 
     // This file is a fork of aiken.php
-
-    global $array;
-    $temp = $array; 
     
     include('../MainPage/array.php');
 
@@ -11,7 +8,7 @@
     $name= substr($filename,0,-4);
     
 
-    $myfile = fopen("testFile.txt", "w") or die("Unable to open file!");
+    $myfile = fopen("./export/$name.txt", "w") or die("Unable to open file!");
 
     for($i = 0; $i < count($array); $i++){
         fwrite($myfile,$array[$i]['Question']."\n");

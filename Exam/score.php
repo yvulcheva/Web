@@ -62,6 +62,9 @@
             echo("</b></p><p><b>");
             print_r("Оценка: " . ($score/(count($array))*100) . "%");
             echo("</b></p>");
+
+            $name= substr($filename,0,-4);
+            $myfile = fopen("./export/$name.txt", "w");
         ?>
 
         <form action="exportResult.php">
