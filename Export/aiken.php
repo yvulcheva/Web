@@ -3,7 +3,7 @@
     global $array;
     include('../MainPage/array.php');
     
-    fill_array();
+  //  fill_array();
 
         
     for($i = 0; $i < count($array); $i++){
