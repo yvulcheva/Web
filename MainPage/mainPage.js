@@ -1,5 +1,5 @@
 function goToExam() {
-    location.href = '../Exam/exam1.html';
+    location.href = '../Exam/exam1.php';
 }
 function goToReview() {
     location.href = '../Review/review.html';
