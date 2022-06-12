@@ -66,7 +66,7 @@
 
         <form action="exportResult.php" method="post">
             <section id="buttons", class="buttons">
-                <button id="button" class="button">Експорт на Вашия резултат</button>
+                <button id="button" class="button-9">Експорт на Вашия резултат</button>
             </section>
             <?php
                 //Getting only the name without the extension

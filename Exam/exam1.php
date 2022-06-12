@@ -24,14 +24,11 @@
 
                     // Printing the questions
                     echo "<ul class='questions'>";
-                        echo "<li>";
-                            print_r("Номер: ");
+                        echo "<li><b>";
                             print_r($i+1);
-                        echo "</li>";
-
-                        echo "<li>";
+                            print_r(". ");
                             print_r($array[$i]['Question']);
-                        echo "</li>";
+                        echo "</b></li>";
 
                         echo "<li>";
                             print_r("A) ");
@@ -66,7 +63,8 @@
                     echo '</select>';
             }
 
-            echo '<input type="submit" name="submit" value="Проверка">';
+            echo "<br><br>";
+            echo '<input type="submit" name="submit" class="button-9" value="Проверка">';
             echo '</form>';
         ?>
 
