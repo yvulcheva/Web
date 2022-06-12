@@ -133,6 +133,11 @@
                         fwrite($myfile,"\n\n");
                     }
                 }
+
+                fwrite($myfile,"\n\nРезултат: ");
+                fwrite($myfile,$score);
+                fwrite($myfile," от " . count($array));
+                fwrite($myfile,"\nОценка: " . ($score/(count($array))*100) . "%\n");
             ?>
         </form>
         <br>
