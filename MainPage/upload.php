@@ -1,7 +1,5 @@
 <?php
     include "./db/config.php";
-    include "./db/table.php";
-    include "./db/array.php";
     
     $filename = $_FILES['file']['name'];
     $location = "../upload./".$filename;
