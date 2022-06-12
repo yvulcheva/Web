@@ -2,7 +2,7 @@ function goToExam() {
     location.href = '../Exam/exam1.php';
 }
 function goToReview() {
-    location.href = '../Review/review.html';
+    location.href = '../Review/review.php';
 }
 function goToExport() {
     location.href = '../Export/export.html';
