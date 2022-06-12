@@ -22,8 +22,24 @@
         fwrite($myfile,"D) ");
         fwrite($myfile,$array[$i]['Option4']."\n");
         fwrite($myfile,"ANSWER: ");
-        fwrite($myfile,$array[$i]['Answer']);
 
+        switch ($array[$i]['Answer']) {
+            case 1:
+                fwrite($myfile,"A");
+                break;
+            case 2:
+                fwrite($myfile,"B");
+                break;
+            case 3:
+                fwrite($myfile,"C");
+                break;
+            case 4:
+                fwrite($myfile,"D");
+                break;
+            default:
+               echo "Not a correct format for ANSWER\n";
+        }
+        
         if($i !== count($array) - 1){
             fwrite($myfile,"\n\n");
         }
