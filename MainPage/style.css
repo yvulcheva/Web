@@ -1,17 +1,71 @@
+html {
+    min-width: 550px;
+    position: relative;
+}
+
 body {
     display: block;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
     text-align: center;
     align-items: center;
     background-image: url("./images/folders1.jpg");
-    background-position: center;
     height: 1000px;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+.main {
+    margin: 0 auto;
+    margin-top: 90px;
+    width: 1200px;
+    height: 600px;
+}
+
 .heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -500px;
+    margin-left: -250px;
+    width: 500px;
+    height: 200px;
     font-size: 80px;
+}
+
+ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -600px;
+    width: 180px;
+    height: 120px;
+    list-style-type: none;
+    padding: 0;
+}
+
+li a {
+    display: block;
+    padding: 7px 16px;
+    text-decoration: none;
+    border-bottom: 4px solid #2a3b86;
+    color: #fff;
+    background: #2a5cc9;
+    border-radius: 5px;
+    margin-bottom: 3px;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background: #3d98ec;
+    color: #fcfcfc;
+    border-bottom: 4px solid #445ac0;
+}
+
+ul {
+    display: block;
 }
 
 form {
@@ -63,7 +117,7 @@ form:hover>.insideText {
     color: #fff;
     background: #2a5cc9;
     border: none;
-    width: 508px;
+    width: 500px;
     height: 35px;
     margin-top: -20px;
     margin-left: -4px;

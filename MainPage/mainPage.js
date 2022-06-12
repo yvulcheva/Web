@@ -7,6 +7,15 @@ function goToReview() {
 function goToExport() {
     location.href = '../Export/export.html';
 }
+//Menu
+function openLeftMenu() {
+    document.getElementById("leftMenu").style.display = "block";
+}
+
+function closeLeftMenu() {
+    document.getElementById("leftMenu").style.display = "none";
+}
+
 
 // Drop zone functions
 function uploadFile() {

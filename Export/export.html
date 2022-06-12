@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>CSV Export</title>
 </head>
 <body>
-    <h1>Експортиране на теста в Мудъл</h1>
-    <p>Изберете формат за експортиране:</p>
-    
-    <iframe name="noRedirection" id="noRedirection" style="display: none"></iframe>
+    <!-- <h1 class="heading">Експортиране на теста за Мудъл</h1> -->
+    <p id="text" class="text">Натисни "Експорт Aiken" за генериране на теста в Aiken формат</p>
 
     <form action="aiken.php">
-        <button>Aiken</button>
+        <section id="buttons", class="buttons">
+            <button id="button" class="button">Експорт Aiken</button>
+        </section>
     </form>
+    <img class="moodle" src="./images/moodle.png">
 </body>
 </html>
