@@ -134,7 +134,7 @@ form:hover>.insideText {
 }
 
 .buttons .button {
-    margin-top: 400px;
+    /* margin-top: 400px; */
     width: 150px;
     height: 35px;
     margin-left: 8px;
