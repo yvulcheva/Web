@@ -18,7 +18,7 @@
             echo "<ul class='questions'>";
                 echo "<li>";
                     print_r("Номер: ");
-                    print_r($i+1);
+                    print_r($i + 1);
                 echo "</li>";
 
                 echo "<li>";
