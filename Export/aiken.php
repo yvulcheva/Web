@@ -1,12 +1,9 @@
 <?php
-
-    global $array;
-    $temp = $array;
     
     include('../MainPage/array.php');
 
     //Getting only the name without the extension
-    $name= substr($filename,0,-3);
+    $name= substr($filename,0,-4);
     
 
     $myfile = fopen("./Aiken/$name.txt", "w") or die("Unable to open file!");
