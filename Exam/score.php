@@ -52,13 +52,16 @@
                     echo("</b></p>");
                 }
             }
+
+            $percentage = ($score/(count($array))*100);
+            $roundPercentage = round((float)$percentage, 2);
             
             echo("<br><p><b>");
             print_r("Резултат: ");
             print_r($score);
             print_r(" от " . count($array));
             echo("</b></p><p><b>");
-            print_r("Оценка: " . ($score/(count($array))*100) . "%");
+            print_r("Оценка: " . ($roundPercentage) . "%");
             echo("</b></p>");
         ?>
 
@@ -135,7 +138,7 @@
                 fwrite($myfile,"\n\nРезултат: ");
                 fwrite($myfile,$score);
                 fwrite($myfile," от " . count($array));
-                fwrite($myfile,"\nОценка: " . ($score/(count($array))*100) . "%\n");
+                fwrite($myfile,"\nОценка: " . $roundPercentage . "%\n");
             ?>
         </form>
         <br>
