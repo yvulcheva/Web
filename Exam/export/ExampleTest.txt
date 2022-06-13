@@ -12,7 +12,7 @@ B) Collapsing Style Sheets
 C) Cascading Style Sheets
 D) Cascading Stylistic Sheets
 Верен отговор: C
-Вашият отговор: Неотговорен
+Вашият отговор: C
 
 Въпрос 3: JS e съкращение за
 A) Java
@@ -62,5 +62,13 @@ D) Digital Versatile Disk
 Верен отговор: B
 Вашият отговор: Неотговорен
 
-Резултат: 1 от 8
-Оценка: 12.5%
+Въпрос 9: HTTPS е съкращение за
+A) Hypertext Transfer Protocol unSecure
+B) Hypertext Transfer Protocol Secure
+C) Hyper Transfer Protocol Secure
+D) Hypertext Transfer Protocol
+Верен отговор: B
+Вашият отговор: B
+
+Резултат: 3 от 9
+Оценка: 33.33%

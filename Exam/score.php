@@ -16,14 +16,12 @@
 
         <?php
             include "../MainPage/array.php";
-            //include "exam1.php";
             $score = 0;
 
             for($i = 0; $i < count($array); $i++)
             {
                 $varQuestion = "question" . $i;
                 $currentAnswer = $_POST[$varQuestion];
-                //var_dump($currentAnswer);
 
                 if ($currentAnswer == $array[$i]['Answer'])
                 {
@@ -54,13 +52,16 @@
                     echo("</b></p>");
                 }
             }
+
+            $percentage = ($score/(count($array))*100);
+            $roundPercentage = round((float)$percentage, 2);
             
             echo("<br><p><b>");
             print_r("Резултат: ");
             print_r($score);
             print_r(" от " . count($array));
             echo("</b></p><p><b>");
-            print_r("Оценка: " . ($score/(count($array))*100) . "%");
+            print_r("Оценка: " . ($roundPercentage) . "%");
             echo("</b></p>");
         ?>
 
@@ -137,12 +138,11 @@
                 fwrite($myfile,"\n\nРезултат: ");
                 fwrite($myfile,$score);
                 fwrite($myfile," от " . count($array));
-                fwrite($myfile,"\nОценка: " . ($score/(count($array))*100) . "%\n");
+                fwrite($myfile,"\nОценка: " . $roundPercentage . "%\n");
             ?>
         </form>
         <br>
     </section>
-    <!-- направи изход с всичките въпроси, отговори и дадените отговори -->
 </body>
 </html>
 

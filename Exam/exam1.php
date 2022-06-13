@@ -51,7 +51,6 @@
                         echo "</li>";
                     echo "</ul>";
                     $varQuestion = "question" . $i;
-                    // var_dump($varQuestion);
 
                     // Select
                     echo '<select id="' . $varQuestion . '" name="' . $varQuestion . '">';
