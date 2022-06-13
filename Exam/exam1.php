@@ -72,7 +72,7 @@
 
             function submit()
             {
-                if(isset($_POST['submit'])){
+                if(isset($_POST["submit"])){
                     if(!empty($_POST['question'])) {
                       $selected = $_POST['question'];
                       print_r('You have chosen: ' . $selected);
