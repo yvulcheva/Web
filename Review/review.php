@@ -69,11 +69,11 @@
             }
             
             ?>
-           
+           <br>
             <label for="feedback">Обратна връзка:</label><br>
             <textarea name="feedbk" rows="5" cols="60" maxlength="1000">
             </textarea>
-            <p><input type="submit" value="Запишете оценка" /></p>
+            <p><input type="submit" value="Запишете рецензия" /></p>
         </form>
         
            
