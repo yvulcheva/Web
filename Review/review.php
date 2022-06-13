@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="bg">
-
+<!-- WITH SQL -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,16 +11,16 @@
 
 <body>
     <section class="page">
-        <h1>Реценция на тест</h1>
-
-        <?php
-        echo '<p>Hello World</p>';
+        <h1>Рецензия на тест</h1>
+        <form action="feedback.php" method="post">
+         <?php
+         $feedback;
             include "../MainPage/array.php";
-            for($i = 0; $i < count($array); $i++){
-                ?>
-                <form action="" method="post">
-                    <?php
-                    echo "<ul class='questions'>";
+            // include "grade.php";
+            
+            for($i=0;$i<count($array);$i++)
+            {
+            
                         echo "<li>";
                             print_r("Номер: ");
                             print_r($i+1);
@@ -49,19 +49,35 @@
                             print_r("D) ");
                             print_r($array[$i]['Option4']);
                         echo "</li>";
-                    echo "</ul>";
-                    ?>
-                  
-                </form>
-                <?php
-            }
+                        print_r("Моля оценете въпроса: ");
+                        
+                        $varQuestion = 'question'.$i;
+                       
+                      
+                        echo '<select id="' . $varQuestion . '" name="' . $varQuestion . '">';
+                        echo '<option value="0">Изберете oценка</option>';
+                        echo '<option value="2">2</option>';
+                        echo '<option value="3">3</option>';
+                        echo '<option value="4">4</option>';
+                        echo '<option value="5">5</option>';
+                        echo '<option value="6">6</option>';
+                    echo '</select>';
+            
+                      
 
-           
-        ?>
         
-
-</section>
-
-</body>
-
-</html>
+            }
+            
+            ?>
+           
+            <label for="feedback">Обратна връзка:</label><br>
+            <textarea name="feedbk" rows="5" cols="60" maxlength="1000">
+            </textarea>
+            <p><input type="submit" value="Запишете оценка" /></p>
+        </form>
+        
+           
+        </section>
+        
+    </body>
+    </html>
