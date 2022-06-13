@@ -16,7 +16,8 @@
          <?php
          $feedback;
             include "../MainPage/array.php";
-            // include "grade.php";
+            include "grade.php"; // comment this
+            include "feedbackOnlyTable.php"; // comment this
             
             for($i=0;$i<count($array);$i++)
             {
