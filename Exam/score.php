@@ -16,14 +16,12 @@
 
         <?php
             include "../MainPage/array.php";
-            //include "exam1.php";
             $score = 0;
 
             for($i = 0; $i < count($array); $i++)
             {
                 $varQuestion = "question" . $i;
                 $currentAnswer = $_POST[$varQuestion];
-                //var_dump($currentAnswer);
 
                 if ($currentAnswer == $array[$i]['Answer'])
                 {
@@ -142,7 +140,6 @@
         </form>
         <br>
     </section>
-    <!-- направи изход с всичките въпроси, отговори и дадените отговори -->
 </body>
 </html>
 
